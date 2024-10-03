@@ -16,45 +16,59 @@ body {
     color: #333;
 }
 
+/* Video Background */
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    opacity: 0.83; /* Slight transparency for the background */
+    z-index: -1;
+}
+
 /* Chat Wrapper */
 .chat-wrapper {
-    width: 100%;
-    max-width: 400px;
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.85); /* Transparent white to blend with background */
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     overflow: hidden;
+    z-index: 1;
+    padding: 20px;
+    max-width: 500px;
+    width: 100%;
 }
 
 /* Join Section Styling */
 .join-section {
-    padding: 20px;
     text-align: center;
 }
 
 .join-section h1 {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: 26px;
     color: #444;
 }
 
 .join-section input {
     width: 80%;
-    padding: 10px;
+    padding: 12px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
 }
 
 .join-section button {
-    padding: 10px 20px;
+    padding: 12px 20px;
     background-color: #28a745;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .join-section button:hover {
@@ -75,24 +89,26 @@ body {
 /* Chat Header */
 .chat-header {
     padding: 15px;
-    background-color: #007bff;
+    background-color: #1d72b8;
     color: white;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #ccc;
 }
 
 .chat-header h2 {
-    font-size: 20px;
+    font-size: 22px;
 }
 
 .chat-header button {
-    padding: 5px 10px;
+    padding: 6px 12px;
     background-color: #dc3545;
     border: none;
     color: white;
-    border-radius: 4px;
+    border-radius: 6px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .chat-header button:hover {
@@ -104,45 +120,37 @@ body {
     flex-grow: 1;
     padding: 15px;
     overflow-y: auto;
-    background-color: #f9f9f9;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight transparency */
     display: flex;
     flex-direction: column;
+    border-radius: 6px;
+    margin-bottom: 10px;
 }
 
 .messages p {
-    padding: 10px;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: white;
+    padding: 10px 15px;
+    border-radius: 20px;
+    font-size: 16px;
     margin-bottom: 10px;
-    width: fit-content;
     max-width: 80%;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-
+/* User Message */
 .messages .my-message {
-    background-color: #007bff;
+    background: linear-gradient(135deg, #4eafff, #7be8ff);
     color: white;
-    align-self: flex-end; /* Align your messages to the right */
+    align-self: flex-end;
     text-align: right;
-    padding: 10px;
     border-radius: 20px 20px 0 20px;
-    margin-bottom: 10px;
-    max-width: 80%;
 }
 
-
-
-
-/* Alternate Message Bubble for Other Users */
+/* Other Users' Message */
 .messages .other-message {
-    background-color: #6c757d;
+    background: linear-gradient(135deg, #62eb47, #a2ff91);
     color: white;
-    align-self: flex-start; /* Align other users' messages to the left */
-    padding: 10px;
+    align-self: flex-start;
     border-radius: 20px 20px 20px 0;
-    margin-bottom: 10px;
-    max-width: 80%;
 }
 
 /* Message Input */
@@ -150,26 +158,28 @@ body {
     display: flex;
     padding: 10px;
     border-top: 1px solid #ccc;
-    background-color: #f1f1f1;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 6px;
 }
 
 .message-input input {
     flex-grow: 1;
-    padding: 10px;
+    padding: 12px;
     border: 1px solid #ccc;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
     margin-right: 10px;
 }
 
 .message-input button {
     padding: 10px 15px;
-    background-color: #007bff;
+    background-color: #0d85fe;
     border: none;
     color: white;
-    border-radius: 4px;
+    border-radius: 6px;
     font-size: 16px;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .message-input button:hover {
