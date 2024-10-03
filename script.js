@@ -37,7 +37,6 @@ function renderMessages() {
     messagesContainer.scrollTop = messagesContainer.scrollHeight;
 }
 
-// Join chat by setting username
 joinButton.addEventListener('click', () => {
     username = usernameInput.value.trim();
     if (username) {

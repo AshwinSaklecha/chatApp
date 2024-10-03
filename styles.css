@@ -105,6 +105,8 @@ body {
     padding: 15px;
     overflow-y: auto;
     background-color: #f9f9f9;
+    display: flex;
+    flex-direction: column;
 }
 
 .messages p {
@@ -117,10 +119,30 @@ body {
     max-width: 80%;
 }
 
+
+.messages .my-message {
+    background-color: #007bff;
+    color: white;
+    align-self: flex-end; /* Align your messages to the right */
+    text-align: right;
+    padding: 10px;
+    border-radius: 20px 20px 0 20px;
+    margin-bottom: 10px;
+    max-width: 80%;
+}
+
+
+
+
 /* Alternate Message Bubble for Other Users */
 .messages .other-message {
     background-color: #6c757d;
-    align-self: flex-start;
+    color: white;
+    align-self: flex-start; /* Align other users' messages to the left */
+    padding: 10px;
+    border-radius: 20px 20px 20px 0;
+    margin-bottom: 10px;
+    max-width: 80%;
 }
 
 /* Message Input */
