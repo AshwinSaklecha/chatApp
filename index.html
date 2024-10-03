@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Real-time Chat Room</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Chat Room Wrapper -->
+    <div class="chat-wrapper">
+        <!-- Join Section -->
+        <div id="join-section" class="join-section">
+            <h1>Welcome to the Chat Room</h1>
+            <input type="text" id="username" placeholder="Enter your username" required>
+            <button id="join-btn">Join Chat</button>
+        </div>
+
+        <!-- Chat Section -->
+        <div id="chat-section" class="chat-section hidden">
+            <div class="chat-header">
+                <h2>Chat Room</h2>
+                <button id="leave-btn">Leave</button>
+            </div>
+            <div id="messages" class="messages"></div>
+            <div class="message-input">
+                <input type="text" id="message" placeholder="Type your message here..." required>
+                <button id="send-btn">Send</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
